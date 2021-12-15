@@ -31,18 +31,7 @@ public class Baseball {
 
         int[] numbers = new int[3];
         int random;
-        for (int i = 0; i < numbers.length; i++) {
-            random = (int)(Math.ceil(Math.random() * 8)+1);
 
-            for (int j = 0; j < numbers.length; j++) {
-                if(numbers[j] != random){
-                    numbers[i] = random;
-                    break;
-                }
-                i--;
-            }
-
-        }
         System.out.println(Arrays.stream(numbers).boxed().collect(Collectors.toList()));
     }
 }
